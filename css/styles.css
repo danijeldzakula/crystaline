@@ -232,13 +232,13 @@ h2 {
 }
 
 .offer_content.offer_top {
-	padding: 10px 0 40px;
-	background: #ffefe5 url(../images/desctop__offer_top_bg.jpg) center -66px no-repeat;
+	/*padding: 10px 0 40px;*/
+	/*background: #ffefe5 url(../images/desctop__offer_top_bg.jpg) center -66px no-repeat;*/
 }
 
 .offer_content.offer_bottom {
-	padding: 10px 0 40px;
-	background: #ffefe5 url(../images/desctop__offer_bottom_bg.jpg) center top no-repeat;
+	/*padding: 10px 0 40px;*/
+	/*background: #ffefe5 url(../images/desctop__offer_bottom_bg.jpg) center top no-repeat;*/
 }
 
 .offer_content .title_block {
@@ -249,7 +249,7 @@ h2 {
 	margin: 0 0 5px;
 	font-family: 'Playfair Display', serif;
 	font-weight: 900;
-	font-size: 60px;
+	font-size: 42px;
 	line-height: 70px;
 	color: #ff7814;
 	white-space: nowrap;
@@ -275,7 +275,7 @@ h2 {
 }
 
 .offer_content.offer_bottom .discount {
-	left: 306px;
+	left: 236px;
 }
 
 .offer_content .discount span {
@@ -350,7 +350,13 @@ h2 {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
+	margin-bottom: 20px;
 	background: #fff;
+}
+@media only screen and (min-width: 640px) {
+	.offer_content .order_form {
+		margin-bottom: 60px;
+	}
 }
 
 .offer_content .timer_block {
@@ -1078,11 +1084,11 @@ h2 {
 	}
 
 	.offer_content.offer_top {
-		background: #ffefe5 url(../images/tablet__offer_bg.jpg) center -95px no-repeat;
+		/*background: #ffefe5 url(../images/tablet__offer_bg.jpg) center -95px no-repeat;*/
 	}
 
 	.offer_content.offer_bottom {
-		background: #ffefe5 url(../images/tablet__offer_bg.jpg) center -95px no-repeat;
+		/*background: #ffefe5 url(../images/tablet__offer_bg.jpg) center -95px no-repeat;*/
 	}
 
 	.offer_content .title_block {
@@ -1324,13 +1330,15 @@ h2 {
 	}
 
 	.offer_content.offer_top {
-		padding: 20px 0 30px;
-		background: #ffefe5 url(../images/mobile__offer_bg.jpg) center 0px no-repeat;
+		/*padding: 20px 0 30px;*/
+		/*background: #ffefe5 url(../images/mobile__offer_bg.jpg) center 0px no-repeat;*/
+
+
 	}
 
 	.offer_content.offer_bottom {
-		padding: 20px 0 30px;
-		background: #ffefe5 url(../images/mobile__offer_bg.jpg) center 0px no-repeat;
+		/*padding: 20px 0 30px;*/
+		/*background: #ffefe5 url(../images/mobile__offer_bg.jpg) center 0px no-repeat;*/
 	}
 
 	.offer_content .title_block .main_title {
@@ -1574,4 +1582,112 @@ h2 {
 		margin: 0 0 30px;
 	}
 
+}
+
+.discount {
+	width: 90px!important;
+	height: 90px!important;
+	background-color: #84be34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;	
+    z-index: 1;
+}
+
+.offer_content.offer_bottom,
+.offer_content.offer_top {
+	position: relative;
+}
+
+
+.gl__figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    z-index: -1;
+}
+
+
+.gl__figure--intro {
+    background: #fff7ec;
+    background: -webkit-linear-gradient(to bottom, #f5e4d4, #fbebdc, #fff7ec);
+    background: linear-gradient(to bottom, #f5e4d4, #fbebdc, #fff7ec);
+}
+
+.gl__figure--order {
+    background: #fff7ec;
+    background: -webkit-linear-gradient(to bottom, #bfc1c0, #bfc4c7, #b9c1c4);
+    background: linear-gradient(to bottom, #bfc1c0, #bfc4c7, #b9c1c4);	
+}
+
+@media only screen and (min-width: 992px) {
+	.gl__figure--intro:after {
+		content: '';
+	    clear: both;
+	    display: block;
+	    background-image: url(../images/with-acne.jpg);
+	    background-repeat: no-repeat;
+	    background-position: 85%;
+	    background-size: cover;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    width: 50%;
+	    height: 100%;
+	    z-index: 0;
+	}
+
+	.gl__figure--order:after {
+		content: '';
+	    clear: both;
+	    display: block;
+	    background-image: url(../images/without-acne.jpg);
+	    background-repeat: no-repeat;
+	    background-position: 25%;
+	    background-size: cover;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    width: 50%;
+	    height: 100%;
+	    z-index: 0;
+	}
+}
+
+.wrapper .clearfix > * {
+	z-index: 1;
+} 
+
+
+.product {
+	position: absolute;
+	left: 0;
+    max-width: 240px;
+    top: 200px;
+}
+
+@media only screen and (min-width: 640px) {
+	.product {
+		top: 170px;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.product {
+		left: 260px;
+	    max-width: 260px;
+	    top: 110px;		
+	}
+
+	.offer_content.offer_top .discount {
+		left: 230px;
+	}
 }
